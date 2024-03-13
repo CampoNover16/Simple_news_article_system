@@ -6,7 +6,7 @@
 ?>
 <div class="news index content">
     <div>
-        <?= $this->Html->link('News List', ['controller' => 'News', 'action' => 'index'], ['class' => 'link-class']) ?>
+        <?= $this->Html->link('News List', ['controller' => 'News', 'action' => 'index'], ['class' => 'link-class']) ?> || 
         <?= $this->Html->link('Author List', ['controller' => 'Authors', 'action' => 'index'], ['class' => 'link-class']) ?>
     </div>
     <?= $this->Html->link(__('New News'), ['action' => 'add'], ['class' => 'button float-right']) ?>
@@ -59,7 +59,6 @@ $(document).ready(function() {
         success: function(response) {
             var articleContainer = $('#example-news-get');
             articleContainer.empty();
-            console.log(response);
 
             if (response.length === 0) {
                 articleContainer.append('<p>No article found by given ID.</p>');

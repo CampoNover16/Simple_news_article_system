@@ -6,7 +6,7 @@
 ?>
 <div class="author index content">
     <div>
-        <?= $this->Html->link('News List', ['controller' => 'News', 'action' => 'index'], ['class' => 'link-class']) ?>
+        <?= $this->Html->link('News List', ['controller' => 'News', 'action' => 'index'], ['class' => 'link-class']) ?> || 
         <?= $this->Html->link('Author List', ['controller' => 'Authors', 'action' => 'index'], ['class' => 'link-class']) ?>
     </div>
     <?= $this->Html->link(__('New Author'), ['action' => 'add'], ['class' => 'button float-right']) ?>
@@ -16,6 +16,7 @@
             <thead>
                 <tr>
                     <th><?= $this->Paginator->sort('id') ?></th>
+                    <th class="name"><?= __('Name') ?></th>
                     <th class="actions"><?= __('Actions') ?></th>
                 </tr>
             </thead>

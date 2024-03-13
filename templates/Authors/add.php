@@ -19,7 +19,6 @@
                 <legend><?= __('Add Author') ?></legend>
                 <?php
                     echo $this->Form->control('name');
-                    echo $this->Form->control('news._ids', ['options' => $news]);
                 ?>
             </fieldset>
             <?= $this->Form->button(__('Submit')) ?>

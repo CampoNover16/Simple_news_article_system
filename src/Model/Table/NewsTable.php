@@ -15,7 +15,6 @@ class NewsTable extends Table
         $this->setDisplayField('title');
         $this->setPrimaryKey('id');
 
-        // Define the association with NewsAuthors
         $this->hasMany('NewsAuthors', [
             'foreignKey' => 'news_id',
         ]);

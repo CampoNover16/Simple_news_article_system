@@ -41,13 +41,9 @@ class AuthorsTable extends Table
 
     public function getTopAuthorsLastWeek()
     {
-        // Calculate the date for one week ago
         $oneWeekAgo = FrozenTime::now()->subWeek();
-
-        // Format the date in MySQL TIMESTAMP format (YYYY-MM-DD HH:MM:SS)
         $formattedDate = $oneWeekAgo->format('Y-m-d H:i:s');
 
-        // Fetch the count of articles written by each author within the last week
         return $this->find()
             ->select(['Authors.id', 'Authors.name', 'article_count' => $this->NewsAuthors->find()->select(['count' => 'COUNT(*)'])->where(function ($exp) use ($formattedDate) {
                 return $exp->gte('News.created', $formattedDate);

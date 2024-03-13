@@ -29,35 +29,6 @@
                     <?= $this->Text->autoParagraph(h($author->name)); ?>
                 </blockquote>
             </div>
-            <div class="related">
-                <h4><?= __('Related News') ?></h4>
-                <?php if (!empty($author->news)) : ?>
-                <div class="table-responsive">
-                    <table>
-                        <tr>
-                            <th><?= __('Id') ?></th>
-                            <th><?= __('Title') ?></th>
-                            <th><?= __('Text') ?></th>
-                            <th><?= __('Created') ?></th>
-                            <th class="actions"><?= __('Actions') ?></th>
-                        </tr>
-                        <?php foreach ($author->news as $news) : ?>
-                        <tr>
-                            <td><?= h($news->id) ?></td>
-                            <td><?= h($news->title) ?></td>
-                            <td><?= h($news->text) ?></td>
-                            <td><?= h($news->created) ?></td>
-                            <td class="actions">
-                                <?= $this->Html->link(__('View'), ['controller' => 'News', 'action' => 'view', $news->id]) ?>
-                                <?= $this->Html->link(__('Edit'), ['controller' => 'News', 'action' => 'edit', $news->id]) ?>
-                                <?= $this->Form->postLink(__('Delete'), ['controller' => 'News', 'action' => 'delete', $news->id], ['confirm' => __('Are you sure you want to delete # {0}?', $news->id)]) ?>
-                            </td>
-                        </tr>
-                        <?php endforeach; ?>
-                    </table>
-                </div>
-                <?php endif; ?>
-            </div>
         </div>
     </div>
 </div>
