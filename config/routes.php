@@ -55,7 +55,9 @@ return function (RouteBuilder $routes): void {
          * its action called 'display', and we pass a param to select the view file
          * to use (in this case, templates/Pages/home.php)...
          */
-        $builder->connect('/', ['controller' => 'Pages', 'action' => 'display', 'home']);
+        $builder->connect('/', ['controller' => 'News', 'action' => 'index']);
+        $builder->connect('/news', ['controller' => 'News', 'action' => 'index']);
+        $builder->connect('/authors', ['controller' => 'Authors', 'action' => 'index']);
 
         /*
          * ...and connect the rest of 'Pages' controller's URLs.
@@ -77,6 +79,17 @@ return function (RouteBuilder $routes): void {
          */
         $builder->fallbacks();
     });
+
+    $routes->connect('/news/getArticleById/:newsId', ['controller' => 'News', 'action' => 'getArticleById'])
+        ->setPass(['newsId'])
+        ->setMethods(['GET']);
+
+    $routes->connect('/authors/articlesByAuthorId/:authorId', ['controller' => 'Authors', 'action' => 'articlesByAuthorId'])
+        ->setPass(['authorId'])
+        ->setMethods(['GET']);
+
+    $routes->connect('/authors/topAuthorsLastWeek', ['controller' => 'Authors', 'action' => 'topAuthorsLastWeek'])
+        ->setMethods(['GET']);
 
     /*
      * If you need a different set of middleware or none at all,
