@@ -23,13 +23,15 @@ Username and password by default have given data(If do not changed in Wampserver
 2. Initial database operations are in file <strong>simple_article_db.sql</strong>(with example data) that is located in main root of the project.
 3. When Wampserver is running you can enter into web browser this link [Localhost phpmyadmin](http://localhost/phpmyadmin/).
 4. Database is called <strong>simple_article_db</strong> with collation <strong>utf8mb3_general_ci</strong>.
+5. After creating the database, import the simple_article_db file.
+6. Your database is ready!
 
 ## How to use it
 
 1. In top left we can switch between News and Author view.
 2. In the middle are listed items News or Author with possibility to manipulation (view, edit, delete).
 3. Each one of view have button in top right for adding content.
-4. In News view under list of items is called <strong>API endpoint</strong> that display <strong>getting article given id</strong>(If no items it will console.log that there is no item of given ID).<br/>
+4. In the News view, <strong>an API endpoint</strong> is called under the list of articles, which displays <strong>the retrieved article with the specified ID</strong> (if there are no articles, console.log that there is no article with the specified ID).<br/>
 ![News-info](readme_assets/news_site.PNG) <br/>
 5. In Author site by clicking in action section "Find all authors" will be called <strong>API endpoint</strong> that display under list of items <strong>all articles for given author ID.</strong><br/>
 ![Find-authors-info](readme_assets/find_authors.PNG) <br/>
