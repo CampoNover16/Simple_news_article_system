@@ -9,7 +9,7 @@
 
 1. Download [Composer](https://getcomposer.org/doc/00-intro.md) or download it by direct link [Direct download link](https://getcomposer.org/Composer-Setup.exe).
 2. After installation of composer install [WampServer](https://sourceforge.net/projects/wampserver/) and click download or alternative install [XAMPP](https://www.apachefriends.org/pl/index.html).
-3. In my scenario #WampServer I need to install also [Visual Studio 2013 (VC++ 12.0)](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170#visual-studio-2013-vc-120) and [Visual Studio 2015, 2017, 2019, and 2022](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170#visual-studio-2015-2017-2019-and-2022).
+3. In my scenario #WampServer I needed to install also [Visual Studio 2013 (VC++ 12.0)](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170#visual-studio-2013-vc-120) and [Visual Studio 2015, 2017, 2019, and 2022](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170#visual-studio-2015-2017-2019-and-2022).
 4. After downloading source code/project put it in WampServer folder in WampServer www folder - my case <strong>C:\wamp64\www</strong> .
 5. In project folder run command <strong>composer install</strong> that create all neccessary files.
 6. At the end of executing of this command you will get info 'Set Folder Permissions?', <strong>press y</strong>.
